@@ -1,1 +1,11 @@
 
+pipeline {
+    agent any 
+    stages {
+        stage('Compile and Clean') { 
+            steps {
+                sh "mvn clean install"
+            }
+        }
+    }
+}
